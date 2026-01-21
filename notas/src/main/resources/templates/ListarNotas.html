@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proy - Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="card-group" style="display: flex; width: 250px; gap: 10px;" th:each="notas : ${notas}">
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+              <h5 class="card-title" th:text="${notas.name}"></h5>
+              <p class="card-text" th:text="${notas.description}"></p>
+              <div class="flex flex-end">
+                  <button class="btn btn-warning">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- <ul th:each="perrito : ${perrito}">
+        <li th:text="${perrito.id}"></li>
+        <li th:text="${perrito.name}"></li>
+        <li th:text="${perrito.description}"></li>
+        <li th:text="${perrito.created}"></li>
+        <li th:text="${perrito.updated}"></li>
+        <li th:text="${perrito.isActive}"></li>
+        <li th:text="${perrito.isDelete}"></li>
+    </ul> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const alertEliminar = () => {
+
+        }
+    </script>
+</body>
+</html>
